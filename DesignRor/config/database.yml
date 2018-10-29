@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: designror_development
+  pool: 5
+  host: localhost
+  username: champ
+  password: champ
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: designror_production
+  pool: 5
+  username: champ
+  password: champ

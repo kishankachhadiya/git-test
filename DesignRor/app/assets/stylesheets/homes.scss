@@ -1,0 +1,185 @@
+@import 'variable';
+
+//element css
+a,li,span,p,td,th{
+  color: $content-color;
+  font-size: $content-font-size;
+}
+a:hover{
+  color:$heading-color;
+}
+.section-heading{
+  font-size: $heading-font-s;
+  color: $sub-heading;
+  font-weight: normal;
+}
+
+header{
+  background: $section-bg;
+  border-bottom: 2px solid $dark-bg;
+  nav.navbar{
+    padding:0 10px;
+    a.navbar-brand{
+      font-size: $sub-heading-font-s;
+      color: $content-color;
+      padding: 11px 15px;
+    }
+    ul.navbar-nav{
+      li.nav-item{
+        a.nav-link{
+          padding: 15px 15px;
+          position: relative;
+        }
+        &.active{
+          a.nav-link{
+            color: $heading-color;
+            &:after{
+              position: absolute;
+              content: "";
+              width:100%;
+              height: 3px;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background:$heading-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.funding-sec {
+  padding: 60px 0;
+  .sec-heading {
+    .est-value {
+      line-height: 22px;
+      span {
+        color: $heading-color;
+        margin-left: 5px;
+      }
+    }
+  }
+  .tab-section {
+    .nav-tabs {
+      padding: 0 30px;
+      background: $section-bg;
+      border: none;
+      .nav-item {
+        .nav-link {
+          background: none;
+          border: none;
+          padding: 24px 10px;
+          line-height: 100%;
+          outline: none;
+          position: relative;
+          margin-right: 20px;
+          &.active {
+            color: $heading-color;
+            &:after{
+              position: absolute;
+              content: "";
+              width:100%;
+              height: 3px;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background:$heading-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tab-content{
+    padding:30px;
+    margin-top:30px;
+    background: $section-bg;
+    .table{
+      &.fold-table{
+        margin-bottom: 0;
+        tr{
+          th{
+            border: none;
+            font-weight: 400;
+            &:first-child{
+              padding-left: 0;
+            }
+          }
+          td{
+            border: none;
+            color: $heading-color;
+            &:first-child{
+              padding-left: 0;
+            }
+          }
+          &.view{
+            border-top:1px solid #334056;
+            cursor: pointer;
+            .btn{
+              background:$input-bg;
+              border: none;
+              font-size: 13px;
+              padding: 5.5px 15px;
+              line-height: 100%;
+              border-radius:0;
+              &:hover{
+                background: $input-hover;
+              }
+            }
+            .close-btn{
+              display: none;
+              color: $content-color;
+              &:hover{
+                color: red;
+              }
+            }
+            &.open{
+              .close-btn{
+                display: block;
+              }
+              .btn-dark{
+                display: none;
+              }
+            }
+          }
+          &.fold{
+            display: none;
+            form{
+              input[type="text"]{
+                width: 100%;
+                background:$input-bg;
+                height: 39px;
+                margin-bottom: 20px;
+                border: none;
+                padding:0 10px;
+                color: $content-color;
+              }
+            }
+            p{
+              &:first-child{
+                margin-bottom: 20px;
+              }
+            }
+            .btn{
+              background:$input-hover;
+              border: none;
+              font-size: 13px;
+              padding:12px 45px;
+              line-height: 100%;
+              border-radius:0;
+              margin:30px 0 20px;
+              &:hover{
+                background: $input-bg;
+              }
+            }
+            &.open{
+              display: table-row;
+            }
+          }
+        }
+      }
+    }
+  }
+}
